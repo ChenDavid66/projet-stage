@@ -1,5 +1,5 @@
 const passport = require('passport');
-routes = require('./routes')
+
 
 module.exports= app => {
   app.get(
