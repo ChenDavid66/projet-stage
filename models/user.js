@@ -5,4 +5,4 @@ const userSchema = new Schema ({
   googleID: String
 });
 
-mongoose.model('user',userSchema);
+mongoose.models('user',userSchema);
