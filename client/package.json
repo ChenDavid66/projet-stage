@@ -2,10 +2,6 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000/auth/google",
-  "/api/*": {
-    "target": "http://localhost:5000"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -18,7 +14,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-stripe-checkout": "^2.6.3",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-form": "^8.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

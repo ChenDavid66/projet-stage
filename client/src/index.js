@@ -9,6 +9,8 @@ import ReduxThunk from 'redux-thunk';
 import App from './components/App';
 //import reducers from './reducers';
 import authReducer from './reducers/index';
+import axios from 'axios';
+window.axios = axios;
 
 //const store = createStore(() => [],{}, applyMiddleware());
 const store = createStore(

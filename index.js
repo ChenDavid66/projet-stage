@@ -2,10 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-const keys = require ('./config/keys');
-require('./models/user');
-require('./services/passport');
 const bodyParser = require('body-parser');
+const keys = require('./config/keys');
+require('./models/user');
+require('./models/Surveys');
+require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
 
@@ -23,6 +24,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes.js')(app) ;
 require('./routes/billingRoutes.js')(app) ;
+require('./routes/surveyRoutes')(app);
 
 if (process.env.NODE_ENV === 'production'){
   app.use(express.static('client/build'));
