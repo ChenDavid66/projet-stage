@@ -32,6 +32,7 @@
     "redux": "^4.0.5",
     "redux-form": "^8.3.0",
     "redux-thunk": "^2.3.0",
+    "require_optional": "^1.0.1",
     "sendgrid": "^5.2.3",
     "stripe": "^8.11.0"
   },
