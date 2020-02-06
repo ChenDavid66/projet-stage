@@ -10,8 +10,9 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+    "webhook": "forever sendgrid_webhook.js"
   },
   "author": "",
   "license": "ISC",
@@ -24,17 +25,24 @@
     "express": "^4.17.1",
     "form-data": "^3.0.0",
     "http-proxy-middleware": "^0.20.0",
+    "lodash": "^4.17.15",
     "mongodb": "^3.5.2",
     "mongoose": "^5.8.10",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
+    "path-parser": "^6.1.0",
     "redux": "^4.0.5",
     "redux-form": "^8.3.0",
     "redux-thunk": "^2.3.0",
+    "require-optional": "^0.4.0",
     "require_optional": "^1.0.1",
     "sendgrid": "^5.2.3",
     "stripe": "^8.11.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "forever": "^2.0.0",
+    "react": "^16.4.0",
+    "react-redux": "^6.0.0"
+  }
 }
